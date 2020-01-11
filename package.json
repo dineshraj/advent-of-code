@@ -1,0 +1,23 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "https://adventofcode.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dineshraj/advent-of-code.git"
+  },
+  "author": "Dineshraj Goomany",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dineshraj/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/dineshraj/advent-of-code#readme",
+  "devDependencies": {
+    "mocha": "^7.0.0",
+    "require-text": "0.0.1"
+  }
+}
