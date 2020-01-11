@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/dineshraj/advent-of-code#readme",
   "devDependencies": {
-    "mocha": "^7.0.0",
-    "require-text": "0.0.1"
+    "mocha": "^7.0.0"
   }
 }
