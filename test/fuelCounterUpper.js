@@ -1,6 +1,6 @@
 const assert = require("assert");
 
-const fuelCounterUpper = require("../fuelCounterUpper");
+const fuelCounterUpper = require("../src/fuelCounterUpper");
 
 describe("Fuel Counter-Upper", () => {
   describe("Day 1 Part 1", () => {
@@ -34,7 +34,7 @@ describe("Fuel Counter-Upper", () => {
 
     it("correctly calculates the amount of fuel for the fuel", async () => {
       const expectedTotalFuel = 180564;
-      const actualTotalFuel = await fuelCounterUpper.calculateSumOfFuelOfFuel(
+      const actualTotalFuel = await fuelCounterUpper.calculateSumOfFuelForFuel(
         "test/fixtures/massListHigherNumbers.txt"
       );
       assert.strictEqual(actualTotalFuel, expectedTotalFuel);

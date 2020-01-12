@@ -1,4 +1,4 @@
-var fuelCounterUpper = require("./fuelCounterUpper");
+var fuelCounterUpper = require("./src/fuelCounterUpper");
 
 // this file is just to get values in the terminal
 

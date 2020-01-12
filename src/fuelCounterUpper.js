@@ -3,8 +3,6 @@ const readLine = require("readline");
 const stream = require("stream");
 const path = require("path");
 
-const fuel = [];
-
 function readLines(file) {
   const output = new stream.PassThrough({ objectMode: true });
   const rl = readLine.createInterface({
@@ -44,17 +42,17 @@ module.exports = {
     const fuelArray = this.calculateFuelOfArray(massArray);
     return sumArray(fuelArray);
   },
-  calculateSumOfFuelOfFuel: async function(file) {
+  calculateSumOfFuelForFuel: async function(file) {
     const massArray = await createArrayFromFile(file);
-    const fuelArray = this.calculateFuelOfFuel(massArray);
+    const fuelArray = this.calculateFuelForFuel(massArray);
     return sumArray(fuelArray);
   },
-  calculateFuelOfFuel: function(array) {
+  calculateFuelForFuel: function(array) {
     if (!array.some(val => val > 0)) {
       return [];
     } else {
       const processedArray = this.calculateFuelOfArray(array);
-      const newArray = this.calculateFuelOfFuel(processedArray);
+      const newArray = this.calculateFuelForFuel(processedArray);
       return newArray.concat(processedArray);
     }
   }
