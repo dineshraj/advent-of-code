@@ -23,6 +23,12 @@ async function createArrayFromFile(file) {
   return array;
 }
 
+function sumArray(array) {
+  return array.reduce((acc, curr) => {
+    return acc + curr;
+  }, 0);
+}
+
 module.exports = {
   calculateFuel: function(mass) {
     const fuel = Math.floor(mass / 3) - 2;
@@ -33,20 +39,15 @@ module.exports = {
       return this.calculateFuel(mass);
     });
   },
-  sumArray: function(array) {
-    return array.reduce((acc, curr) => {
-      return acc + curr;
-    }, 0);
-  },
   calculateSumOfFuel: async function(file) {
     const massArray = await createArrayFromFile(file);
     const fuelArray = this.calculateFuelOfArray(massArray);
-    return this.sumArray(fuelArray);
+    return sumArray(fuelArray);
   },
   calculateSumOfFuelOfFuel: async function(file) {
     const massArray = await createArrayFromFile(file);
     const fuelArray = this.calculateFuelOfFuel(massArray);
-    return this.sumArray(fuelArray);
+    return sumArray(fuelArray);
   },
   calculateFuelOfFuel: function(array) {
     if (!array.some(val => val > 0)) {
