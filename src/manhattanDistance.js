@@ -82,13 +82,12 @@ module.exports = {
     );
     const commonValues = [];
 
-    for (let i = 0; i < wire1.length; i++) {
+    for (let i = 1; i < wire1.length; i++) {
       const wire1Coord = wire1[i];
       for (let j = 0; j < wire2.length; j++) {
         const wire2Coord = wire2[j];
+
         if (
-          wire1Coord[0] !== 0 &&
-          wire1Coord[1] !== 0 &&
           wire1Coord[0] === wire2Coord[0] &&
           wire1Coord[1] === wire2Coord[1]
         ) {
