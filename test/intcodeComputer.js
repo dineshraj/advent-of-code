@@ -30,7 +30,7 @@ describe("Intcode Computer", () => {
   });
 
   describe("Part 2", () => {
-    it.only("can determine which pairs produce a certain ouput at position 0", () => {
+    it("can determine which pairs produce a certain ouput at position 0", () => {
       const expectedOutput = 19690720;
       const actualOutput = intcodeComputer.findOutputFromPairs(
         "test/fixtures/intcodeDayTwoFull.txt"
